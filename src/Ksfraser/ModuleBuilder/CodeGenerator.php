@@ -257,6 +257,7 @@ PHP;
     public function generateHookFile(): string
     {
         $name = $this->module->name;
+        $nameLower = strtolower($name);
         $className = "FA{$name}";
 
         $hooks_code = "";
@@ -265,7 +266,7 @@ PHP;
             $hooks_code .= <<<PHP
 
 add_hook('{$hook_name}', function(\$params) use (\$className) {
-    return {$className}::hook_{\$params['action']}(\$params);
+    return {$className}::hook_\$params['action'](\$params);
 });
 
 PHP;
@@ -276,12 +277,12 @@ PHP;
 
 add_menu_entry('{$name}', '{$this->module->label}', '{$name}');
 
-function ksf_fa_{$name}_install()
+function ksf_fa_{$nameLower}_install()
 {
     {$className}::install();
 }
 
-function ksf_fa_{$name}_uninstall()
+function ksf_fa_{$nameLower}_uninstall()
 {
     {$className}::uninstall();
 }
@@ -292,10 +293,11 @@ PHP;
 
     public function generateFormView(): string
     {
+        $name = strtolower($this->module->name);
         $fields_html = "";
         foreach ($this->module->fields as $field) {
-            $name = $field->name;
-            $label = $field->label ?? ucfirst($name);
+            $field_name = $field->name;
+            $label = $field->label ?? ucfirst($field_name);
             $type = $field->type;
 
             if ($type === 'enum') {
@@ -303,7 +305,7 @@ PHP;
                 $fields_html .= <<<HTML
 <div class="form-group">
     <label>{$label}</label>
-    <select name="{$name}" class="form-control">
+    <select name="{$field_name}" class="form-control">
         <option value="">Select...</option>
         <option value=""></option>
     </select>
@@ -314,7 +316,7 @@ HTML;
                 $fields_html .= <<<HTML
 <div class="form-group">
     <label>{$label}</label>
-    <textarea name="{$name}" class="form-control" rows="4"></textarea>
+    <textarea name="{$field_name}" class="form-control" rows="4"></textarea>
 </div>
 
 HTML;
@@ -323,7 +325,7 @@ HTML;
                 $fields_html .= <<<HTML
 <div class="form-group">
     <label>{$label}</label>
-    <input type="{$input_type}" name="{$name}" class="form-control">
+    <input type="{$input_type}" name="{$field_name}" class="form-control">
 </div>
 
 HTML;

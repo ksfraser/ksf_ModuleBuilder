@@ -25,7 +25,7 @@ class ModuleDefinition
     public array $permissions = [];
     public array $workflow_triggers = [];
     public array $hooks = [];
-    public ?string $parent_module;
+    public ?string $parent_module = null;
 
     public function __construct(string $name, string $label)
     {

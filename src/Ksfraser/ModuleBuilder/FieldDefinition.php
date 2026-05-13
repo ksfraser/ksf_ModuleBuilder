@@ -8,14 +8,14 @@ class FieldDefinition
 {
     public string $name;
     public string $type;
-    public ?string $label;
+    public ?string $label = null;
     public bool $required = false;
     public ?string $default = null;
     public ?int $length = null;
     public array $options = [];
     public bool $unique = false;
     public bool $indexed = false;
-    public ?string $validation;
+    public ?string $validation = null;
 
     public function __construct(string $name, string $type = 'varchar')
     {
