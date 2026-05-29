@@ -179,25 +179,45 @@ class ModuleDefinition
 
     private function mapType(string $type): string
     {
-        return match ($type) {
-            'varchar' => 'VARCHAR',
-            'text' => 'TEXT',
-            'int', 'integer' => 'INT',
-            'bigint' => 'BIGINT',
-            'decimal' => 'DECIMAL(10,2)',
-            'float' => 'FLOAT',
-            'boolean', 'bool' => 'TINYINT(1)',
-            'date' => 'DATE',
-            'datetime' => 'DATETIME',
-            'timestamp' => 'TIMESTAMP',
-            'email' => 'VARCHAR(255)',
-            'phone' => 'VARCHAR(50)',
-            'url' => 'VARCHAR(500)',
-            'json' => 'JSON',
-            'file' => 'VARCHAR(500)',
-            'enum' => 'ENUM',
-            default => 'VARCHAR(255)',
-        };
+        if (in_array($type, ['int', 'integer'])) {
+            return 'INT';
+        }
+        if (in_array($type, ['boolean', 'bool'])) {
+            return 'TINYINT(1)';
+        }
+
+        switch ($type) {
+            case 'varchar':
+                return 'VARCHAR';
+            case 'text':
+                return 'TEXT';
+            case 'bigint':
+                return 'BIGINT';
+            case 'decimal':
+                return 'DECIMAL(10,2)';
+            case 'float':
+                return 'FLOAT';
+            case 'date':
+                return 'DATE';
+            case 'datetime':
+                return 'DATETIME';
+            case 'timestamp':
+                return 'TIMESTAMP';
+            case 'email':
+                return 'VARCHAR(255)';
+            case 'phone':
+                return 'VARCHAR(50)';
+            case 'url':
+                return 'VARCHAR(500)';
+            case 'json':
+                return 'JSON';
+            case 'file':
+                return 'VARCHAR(500)';
+            case 'enum':
+                return 'ENUM';
+            default:
+                return 'VARCHAR(255)';
+        }
     }
 
     public function toArray(): array
@@ -213,7 +233,7 @@ class ModuleDefinition
             'has_comments' => $this->has_comments,
             'has_workflow' => $this->has_workflow,
             'has_revision' => $this->has_revision,
-            'fields' => array_map(fn($f) => $f->toArray(), $this->fields),
+            'fields' => array_map(function ($f) { return $f->toArray(); }, $this->fields),
             'relations' => $this->relations,
             'permissions' => $this->permissions,
             'workflow_triggers' => $this->workflow_triggers,
