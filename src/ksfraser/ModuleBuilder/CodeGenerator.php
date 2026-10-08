@@ -1,6 +1,6 @@
 <?php
 
-namespace Ksfraser\ModuleBuilder;
+namespace ksfraser\ModuleBuilder;
 
 class CodeGenerator
 {

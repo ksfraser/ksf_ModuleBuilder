@@ -7,12 +7,12 @@
     },
     "autoload": {
         "classmap": [
-            "src/Ksfraser/ModuleBuilder/"
+            "src/ksfraser/ModuleBuilder/"
         ]
     },
     "autoload-dev": {
         "psr-4": {
-            "Ksfraser\\Tests\\": "tests/"
+            "ksfraser\\Tests\\": "tests/"
         }
     }
 }

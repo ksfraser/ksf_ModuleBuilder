@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Ksfraser\Tests\Unit\ModuleBuilder;
+namespace ksfraser\Tests\Unit\ModuleBuilder;
 
-use Ksfraser\ModuleBuilder\FieldDefinition;
+use ksfraser\ModuleBuilder\FieldDefinition;
 use PHPUnit\Framework\TestCase;
 
 class FieldDefinitionTest extends TestCase

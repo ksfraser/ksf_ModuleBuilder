@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Ksfraser\Tests\Unit\ModuleBuilder;
+namespace ksfraser\Tests\Unit\ModuleBuilder;
 
-use Ksfraser\ModuleBuilder\CodeGenerator;
-use Ksfraser\ModuleBuilder\FieldDefinition;
-use Ksfraser\ModuleBuilder\ModuleDefinition;
+use ksfraser\ModuleBuilder\CodeGenerator;
+use ksfraser\ModuleBuilder\FieldDefinition;
+use ksfraser\ModuleBuilder\ModuleDefinition;
 use PHPUnit\Framework\TestCase;
 
 class CodeGeneratorTest extends TestCase
