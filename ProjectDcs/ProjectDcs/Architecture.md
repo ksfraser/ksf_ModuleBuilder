@@ -20,7 +20,7 @@ The ksf_ModuleBuilder module follows **Builder Pattern** combined with **Factory
 
 ### 1.2 Module Classification
 - **Type**: Code Generation Framework
-- **Namespace**: `Ksfraser\ModuleBuilder`
+- **Namespace**: `ksfraser\ModuleBuilder`
 - **Platform**: Standalone (PHP 7.3+)
 
 ### 1.3 Architecture Layers
@@ -338,7 +338,7 @@ ksf_ModuleBuilder/
 │   ├── UML/
 │   └── RTM/
 ├── src/
-│   └── Ksfraser/
+│   └── ksfraser/
 │       └── ModuleBuilder/
 │           ├── ModuleDefinition.php
 │           ├── FieldDefinition.php

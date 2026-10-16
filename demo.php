@@ -1,8 +1,8 @@
 <?php
 
 spl_autoload_register(function ($class) {
-    $prefix = 'Ksfraser\\ModuleBuilder\\';
-    $base_dir = __DIR__ . '/src/Ksfraser/ModuleBuilder/';
+    $prefix = 'ksfraser\\ModuleBuilder\\';
+    $base_dir = __DIR__ . '/src/ksfraser/ModuleBuilder/';
     
     $len = strlen($prefix);
     if (strncmp($prefix, $class, $len) !== 0) {
@@ -17,9 +17,9 @@ spl_autoload_register(function ($class) {
     }
 });
 
-use Ksfraser\ModuleBuilder\ModuleDefinition;
-use Ksfraser\ModuleBuilder\FieldDefinition;
-use Ksfraser\ModuleBuilder\CodeGenerator;
+use ksfraser\ModuleBuilder\ModuleDefinition;
+use ksfraser\ModuleBuilder\FieldDefinition;
+use ksfraser\ModuleBuilder\CodeGenerator;
 
 $module = ModuleDefinition::create('Asset', 'Assets')
     ->description('Track company assets')

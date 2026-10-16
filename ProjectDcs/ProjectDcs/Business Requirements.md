@@ -337,9 +337,9 @@ $module->addPermission([
 ### 6.1 Basic Module Definition
 
 ```php
-use Ksfraser\ModuleBuilder\ModuleDefinition;
-use Ksfraser\ModuleBuilder\FieldDefinition;
-use Ksfraser\ModuleBuilder\CodeGenerator;
+use ksfraser\ModuleBuilder\ModuleDefinition;
+use ksfraser\ModuleBuilder\FieldDefinition;
+use ksfraser\ModuleBuilder\CodeGenerator;
 
 // Define module
 $module = ModuleDefinition::create('Customer', 'Customer Management')

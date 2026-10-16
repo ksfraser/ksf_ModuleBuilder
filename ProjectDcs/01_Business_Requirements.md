@@ -74,7 +74,7 @@ ModuleBuilder automates module scaffolding with:
 ```php
 $definition = new ModuleDefinition();
 $definition->setName('CustomerPortal')
-    ->setNamespace('Ksfraser\CustomerPortal')
+    ->setNamespace('ksfraser\CustomerPortal')
     ->setType('Business Logic')
     ->setDependencies(['ksf_CRM', 'ksf_EmailManager'])
     ->addEntity('Customer')
@@ -87,7 +87,7 @@ $definition->setName('CustomerPortal')
 ksf_CustomerPortal/
 ├── composer.json
 ├── src/
-│   └── Ksfraser/
+│   └── ksfraser/
 │       └── CustomerPortal/
 │           ├── Entity/
 │           │   └── Customer.php

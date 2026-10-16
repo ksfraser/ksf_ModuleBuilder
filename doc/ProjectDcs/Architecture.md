@@ -75,7 +75,7 @@ ModuleBuilder implements a fluent builder pattern for defining FrontAccounting m
 
 ```
 ksf_ModuleBuilder/
-├── src/Ksfraser/ModuleBuilder/
+├── src/ksfraser/ModuleBuilder/
 │   ├── ModuleDefinition.php
 │   ├── FieldDefinition.php
 │   └── CodeGenerator.php

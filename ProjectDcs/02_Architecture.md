@@ -17,7 +17,7 @@
 ### 1.1 Design Philosophy
 
 ModuleBuilder follows the KSF pattern itself:
-- Pure business logic in `src/Ksfraser/ModuleBuilder/`
+- Pure business logic in `src/ksfraser/ModuleBuilder/`
 - Framework-agnostic code generation
 - Extensible template system
 
@@ -25,7 +25,7 @@ ModuleBuilder follows the KSF pattern itself:
 
 ```
 ksf_ModuleBuilder/
-├── src/Ksfraser/ModuleBuilder/
+├── src/ksfraser/ModuleBuilder/
 │   ├── CodeGenerator.php      # Main generator
 │   ├── ModuleDefinition.php   # Module metadata
 │   └── FieldDefinition.php     # Field schema
@@ -40,7 +40,7 @@ ksf_ModuleBuilder/
 ### 2.1 ModuleDefinition
 
 ```php
-namespace Ksfraser\ModuleBuilder;
+namespace ksfraser\ModuleBuilder;
 
 class ModuleDefinition {
     
@@ -66,7 +66,7 @@ class ModuleDefinition {
 ### 2.2 FieldDefinition
 
 ```php
-namespace Ksfraser\ModuleBuilder;
+namespace ksfraser\ModuleBuilder;
 
 class FieldDefinition {
     
@@ -88,7 +88,7 @@ class FieldDefinition {
 ### 2.3 CodeGenerator
 
 ```php
-namespace Ksfraser\ModuleBuilder;
+namespace ksfraser\ModuleBuilder;
 
 class CodeGenerator {
     
@@ -139,7 +139,7 @@ Generated Module/
 ├── composer.json          # With ksfraser/* dependencies
 ├── phpunit.xml           # PHPUnit 9/10 config
 ├── src/
-│   └── Ksfraser/
+│   └── ksfraser/
 │       └── [ModuleName]/
 │           ├── Entity/
 │           │   └── [Entity].php
