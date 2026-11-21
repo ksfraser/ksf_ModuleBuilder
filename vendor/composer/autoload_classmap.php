@@ -7,9 +7,6 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Composer\\InstalledVersions' => $vendorDir . '/composer/InstalledVersions.php',
-    'Ksfraser\\ModuleBuilder\\CodeGenerator' => $baseDir . '/src/Ksfraser/ModuleBuilder/CodeGenerator.php',
-    'Ksfraser\\ModuleBuilder\\FieldDefinition' => $baseDir . '/src/Ksfraser/ModuleBuilder/FieldDefinition.php',
-    'Ksfraser\\ModuleBuilder\\ModuleDefinition' => $baseDir . '/src/Ksfraser/ModuleBuilder/ModuleDefinition.php',
     'PHPUnit\\Event\\Application\\Finished' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Application/Finished.php',
     'PHPUnit\\Event\\Application\\FinishedSubscriber' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Application/FinishedSubscriber.php',
     'PHPUnit\\Event\\Application\\Started' => $vendorDir . '/phpunit/phpunit/src/Event/Events/Application/Started.php',
@@ -1186,4 +1183,7 @@ return array(
     'TheSeer\\Tokenizer\\TokenCollectionException' => $vendorDir . '/theseer/tokenizer/src/TokenCollectionException.php',
     'TheSeer\\Tokenizer\\Tokenizer' => $vendorDir . '/theseer/tokenizer/src/Tokenizer.php',
     'TheSeer\\Tokenizer\\XMLSerializer' => $vendorDir . '/theseer/tokenizer/src/XMLSerializer.php',
+    'ksfraser\\ModuleBuilder\\CodeGenerator' => $baseDir . '/src/ksfraser/ModuleBuilder/CodeGenerator.php',
+    'ksfraser\\ModuleBuilder\\FieldDefinition' => $baseDir . '/src/ksfraser/ModuleBuilder/FieldDefinition.php',
+    'ksfraser\\ModuleBuilder\\ModuleDefinition' => $baseDir . '/src/ksfraser/ModuleBuilder/ModuleDefinition.php',
 );

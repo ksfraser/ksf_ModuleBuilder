@@ -12,13 +12,13 @@ class ComposerStaticInit09a1305376f983dc287cdf3e9982e6cb
     );
 
     public static $prefixLengthsPsr4 = array (
+        'k' => 
+        array (
+            'ksfraser\\Tests\\' => 15,
+        ),
         'P' => 
         array (
             'PhpParser\\' => 10,
-        ),
-        'K' => 
-        array (
-            'Ksfraser\\Tests\\' => 15,
         ),
         'D' => 
         array (
@@ -27,13 +27,13 @@ class ComposerStaticInit09a1305376f983dc287cdf3e9982e6cb
     );
 
     public static $prefixDirsPsr4 = array (
+        'ksfraser\\Tests\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/tests',
+        ),
         'PhpParser\\' => 
         array (
             0 => __DIR__ . '/..' . '/nikic/php-parser/lib/PhpParser',
-        ),
-        'Ksfraser\\Tests\\' => 
-        array (
-            0 => __DIR__ . '/../..' . '/tests',
         ),
         'DeepCopy\\' => 
         array (
@@ -43,9 +43,6 @@ class ComposerStaticInit09a1305376f983dc287cdf3e9982e6cb
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
-        'Ksfraser\\ModuleBuilder\\CodeGenerator' => __DIR__ . '/../..' . '/src/Ksfraser/ModuleBuilder/CodeGenerator.php',
-        'Ksfraser\\ModuleBuilder\\FieldDefinition' => __DIR__ . '/../..' . '/src/Ksfraser/ModuleBuilder/FieldDefinition.php',
-        'Ksfraser\\ModuleBuilder\\ModuleDefinition' => __DIR__ . '/../..' . '/src/Ksfraser/ModuleBuilder/ModuleDefinition.php',
         'PHPUnit\\Event\\Application\\Finished' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/Finished.php',
         'PHPUnit\\Event\\Application\\FinishedSubscriber' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/FinishedSubscriber.php',
         'PHPUnit\\Event\\Application\\Started' => __DIR__ . '/..' . '/phpunit/phpunit/src/Event/Events/Application/Started.php',
@@ -1222,6 +1219,9 @@ class ComposerStaticInit09a1305376f983dc287cdf3e9982e6cb
         'TheSeer\\Tokenizer\\TokenCollectionException' => __DIR__ . '/..' . '/theseer/tokenizer/src/TokenCollectionException.php',
         'TheSeer\\Tokenizer\\Tokenizer' => __DIR__ . '/..' . '/theseer/tokenizer/src/Tokenizer.php',
         'TheSeer\\Tokenizer\\XMLSerializer' => __DIR__ . '/..' . '/theseer/tokenizer/src/XMLSerializer.php',
+        'ksfraser\\ModuleBuilder\\CodeGenerator' => __DIR__ . '/../..' . '/src/ksfraser/ModuleBuilder/CodeGenerator.php',
+        'ksfraser\\ModuleBuilder\\FieldDefinition' => __DIR__ . '/../..' . '/src/ksfraser/ModuleBuilder/FieldDefinition.php',
+        'ksfraser\\ModuleBuilder\\ModuleDefinition' => __DIR__ . '/../..' . '/src/ksfraser/ModuleBuilder/ModuleDefinition.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
